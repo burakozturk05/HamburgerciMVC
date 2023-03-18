@@ -1,0 +1,21 @@
+﻿@using MVCPROJE.Data;
+Burada Ekleme için Form olacak.
+@model Urun
+<div class="card">
+	<div class="card-header"><h1> URUN GUNCELLEME</h1>
+		</div>
+
+	<div class="card-body">
+		<form asp-action="Guncelle" asp-controller="Home" method="post"> 
+			<div class="form-group">
+			<label asp-for="Menu"> Ürün Adı:</label>
+			<input asp-for="Menu" class="form-control"/>
+			</div>
+				<div class="form-group">
+			<label asp-for="Fiyat"> Ürün Fiyatı:</label>
+			<input asp-for="Fiyat" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-succes"> ÜRÜN GUNCELLE</button>
+			</form>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+﻿@using MVCPROJE.Data;
+
+@model List<Urun>
+
+<h1>Sipariş Bilgileri</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>Menu</tr>
+        <tr>Fiyat</tr>
+    </thead>
+    <tbody>
+        @{
+            //Burada modelimiz ürün türünde liste olduğu için döngü ile iterasyon yapabiliriz.
+            foreach(var urun in Model)
+            {
+                <tr>
+                    <td>@urun.Menu</td>
+                    <td>@urun.Fiyat</td>
+                    <td> <a asp-action="Guncelle" asp-route-id="@urun.Id" class="btn btn-info">Guncelle</a></td>
+                    <td> <a asp-action="Sil" asp-route-id ="@urun.Id"  class="btn btn-danger">Sil</a></td> @*Buraya her bir ürünün ID'sini göndereceğiz.*@
+                </tr>
+            }
+        }
+          <h2>Toplamtutar: @ViewBag.Tutar + @ViewBag.Tutar1 (Eklenmis Malzeme Tutarı)</h2>
+          
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+﻿@using MVCPROJE.Data;
+
+@model Urun
+<div class="card">
+	<div class="card-header"><h1> YENİ URUN SEÇME</h1>
+		</div>
+		<h4>URUNLER</h4>
+		<img src="~/images/hamburger.jpg" />
+	<table class="table table-striped">
+		<tr><td>KING CHICKEN MENU 100 TL</td></tr>
+		<tr><td>DOUBLE WHOPPER MENU 125 TL</td></tr>
+		<tr><td>SINGLE WHOPPER MENU 110TL</td></tr>
+		<tr><td>TEXAS SMOKEHOUSE MENU 140 TL</td></tr>
+		<tr><td>WHOPPER JR. MENU 95 TL</td></tr>
+		<tr><TD>BIG KING MENU 115 TL </TD></tr>
+			
+		</table>
+	<div class="card-body">
+		<form asp-action="Ekle" asp-controller="Home" method="post"> 
+			<div class="form-group">
+			<label asp-for="Menu"> Ürün Adı:</label>
+			<input asp-for="Menu" class="form-control"/>
+			</div>
+				<div class="form-group">
+			<label asp-for="Fiyat"> Ürün Fiyatı:</label>
+			<input asp-for="Fiyat" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-succes"> ÜRÜN EKLE</button>
+			</form>
+	</div>
+</div>
+
+
+
+

@@ -1,0 +1,31 @@
+﻿@using MVCPROJE.Data;
+@model ExtraMalzeme
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Ad </th>
+		</tr>
+		<tr><td>Hardal 3 TL</td></tr>
+		<tr><td>Ketçap 3TL </td></tr>
+		<tr><td>Mayonez 3TL </td></tr>
+		<tr><td>Domates 3 TL</td></tr>
+		<tr><td>Soğan 3 TL</td></tr>
+		<tr><td>Biber 3 tL</td></tr>
+		<tr><td>Soğan Halkası 15 TL</td></tr>
+		<tr><td>Baharatlı Patates Kızartması 15TL</td></tr>
+		<br />
+			</table>
+<div class="card-body">
+	<form asp-action="ExtraEkle" asp-controller="Home" method="post">
+		<div class="form-group">
+			<label asp-for="Ad"> Ürün Adı:</label>
+			<input asp-for="Ad" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="Fiyat"> Ürün Fiyatı:</label>
+			<input asp-for="Fiyat" class="form-control" />
+		</div>
+		<button type="submit" class="btn btn-succes"> ÜRÜN EKLE</button>
+	</form>
+</div>
+</div>
